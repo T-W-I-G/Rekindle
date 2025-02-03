@@ -70,26 +70,7 @@
 
     </style>
 </head>
-<body>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let elements = document.querySelectorAll(".zoom-effect");
-    
-            let observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                    } else {
-                        entry.target.classList.remove("visible"); // Allows repeated zooming
-                    }
-                });
-            }, { threshold: 0.1 }); // Lower threshold triggers animation sooner
-    
-            elements.forEach(element => {
-                observer.observe(element);
-            });
-        });
-    </script>    
+<body>    
     <div class="image-container">
         <img src="https://i.imgur.com/f1l3qXa.png" alt="Rekindle Banner" class="zoom-effect">
     </div>
